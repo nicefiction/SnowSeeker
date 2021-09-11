@@ -1,17 +1,20 @@
-//
-//  SnowSeekerApp.swift
-//  Shared
-//
-//  Created by Olivier Van hamme on 11/09/2021.
-//
+// SnowSeekerApp.swift
+
+// MARK: - LIBRARIES
 
 import SwiftUI
 
 @main
 struct SnowSeekerApp: App {
+    
+    // MARK: - COMPUTED PROPERTIES
+    
     var body: some Scene {
+        
         WindowGroup {
-            ContentView()
+            
+            // ContentView()
+            SideBySideViews()
         }
     }
 }

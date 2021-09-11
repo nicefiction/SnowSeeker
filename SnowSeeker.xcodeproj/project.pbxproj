@@ -13,6 +13,7 @@
 		C5F8D53A26ED371A001EB2D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8D52526ED371A001EB2D6 /* ContentView.swift */; };
 		C5F8D53B26ED371A001EB2D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F8D52626ED371A001EB2D6 /* Assets.xcassets */; };
 		C5F8D53C26ED371A001EB2D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F8D52626ED371A001EB2D6 /* Assets.xcassets */; };
+		C5F8D54826ED39D4001EB2D6 /* SideBySideViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8D54726ED39D4001EB2D6 /* SideBySideViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C5F8D53326ED371A001EB2D6 /* SnowSeeker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowSeeker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F8D53526ED371A001EB2D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5F8D53626ED371A001EB2D6 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		C5F8D54726ED39D4001EB2D6 /* SideBySideViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBySideViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		C5F8D52D26ED371A001EB2D6 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C5F8D54526ED3810001EB2D6 /* Techniques */,
 				C5F8D52E26ED371A001EB2D6 /* Info.plist */,
 			);
 			path = iOS;
@@ -88,6 +91,22 @@
 				C5F8D53626ED371A001EB2D6 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		C5F8D54526ED3810001EB2D6 /* Techniques */ = {
+			isa = PBXGroup;
+			children = (
+				C5F8D54626ED3819001EB2D6 /* Day 96 */,
+			);
+			path = Techniques;
+			sourceTree = "<group>";
+		};
+		C5F8D54626ED3819001EB2D6 /* Day 96 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F8D54726ED39D4001EB2D6 /* SideBySideViews.swift */,
+			);
+			path = "Day 96";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +208,7 @@
 			files = (
 				C5F8D53926ED371A001EB2D6 /* ContentView.swift in Sources */,
 				C5F8D53726ED371A001EB2D6 /* SnowSeekerApp.swift in Sources */,
+				C5F8D54826ED39D4001EB2D6 /* SideBySideViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
