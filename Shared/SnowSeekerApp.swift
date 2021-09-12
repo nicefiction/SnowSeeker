@@ -14,7 +14,7 @@ struct SnowSeekerApp: App {
         WindowGroup {
             
             // ContentView()
-            AlertSheetOptionals()
+            SizeClassView()
         }
     }
 }
