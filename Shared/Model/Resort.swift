@@ -1,0 +1,43 @@
+// Resort.swift
+
+// MARK: - LIBRARIES -
+
+import Foundation
+
+
+struct Resort: Codable,
+               Identifiable {
+    
+    // MARK: - NESTED TYPES
+    
+    enum Facility: String {
+        
+        case family = "Family"
+        case crossCountry = "Cross-country"
+        case accomodation = "Accommodation"
+        case ecoFriendly = "Eco-friendly"
+    }
+    
+    
+    
+    // MARK: - STATIC PROPERTIES
+    
+    static let decodedResorts: Array<Resort> = Bundle.main.decode("resorts.json")
+    static let exampleResort: Resort = decodedResorts[0]
+    
+    
+    
+    // MARK: - PROPERTIES
+    
+    let country: String
+    let description: String
+    let elevation: Int
+    let facilities: Array<String>
+    let id: String
+    let imageCredit: String
+    let name: String
+    let price: Double
+    let runs: Int
+    let size: Int
+    let snowDepth: Int
+}

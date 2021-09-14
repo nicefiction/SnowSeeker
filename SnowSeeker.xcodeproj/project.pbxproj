@@ -17,6 +17,9 @@
 		C5F8D54A26EE0A4C001EB2D6 /* AlertSheetOptionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8D54926EE0A4C001EB2D6 /* AlertSheetOptionals.swift */; };
 		C5F8D54C26EE3037001EB2D6 /* UsingGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8D54B26EE3036001EB2D6 /* UsingGroups.swift */; };
 		C5F8D55026EE69F1001EB2D6 /* SizeClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8D54F26EE69F1001EB2D6 /* SizeClassView.swift */; };
+		C5F8D55226F0A32C001EB2D6 /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = C5F8D55126F0A32C001EB2D6 /* resorts.json */; };
+		C5F8D55426F0A40A001EB2D6 /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8D55326F0A40A001EB2D6 /* Resort.swift */; };
+		C5F8D55626F0A6A7001EB2D6 /* Bundle+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F8D55526F0A6A7001EB2D6 /* Bundle+Decodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		C5F8D54926EE0A4C001EB2D6 /* AlertSheetOptionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSheetOptionals.swift; sourceTree = "<group>"; };
 		C5F8D54B26EE3036001EB2D6 /* UsingGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingGroups.swift; sourceTree = "<group>"; };
 		C5F8D54F26EE69F1001EB2D6 /* SizeClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeClassView.swift; sourceTree = "<group>"; };
+		C5F8D55126F0A32C001EB2D6 /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = resorts.json; path = "../../../_SwiftUI/project19-files/resorts.json"; sourceTree = "<group>"; };
+		C5F8D55326F0A40A001EB2D6 /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = "<group>"; };
+		C5F8D55526F0A6A7001EB2D6 /* Bundle+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +71,11 @@
 		C5F8D52326ED371A001EB2D6 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C5F8D54526ED3810001EB2D6 /* Techniques */,
 				C5F8D52426ED371A001EB2D6 /* SnowSeekerApp.swift */,
-				C5F8D52526ED371A001EB2D6 /* ContentView.swift */,
+				C5F8D55126F0A32C001EB2D6 /* resorts.json */,
+				C5F8D55726F0A70F001EB2D6 /* Model */,
+				C5F8D55826F0A71E001EB2D6 /* View */,
 				C5F8D52626ED371A001EB2D6 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -84,7 +93,6 @@
 		C5F8D52D26ED371A001EB2D6 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C5F8D54526ED3810001EB2D6 /* Techniques */,
 				C5F8D52E26ED371A001EB2D6 /* Info.plist */,
 			);
 			path = iOS;
@@ -116,6 +124,23 @@
 				C5F8D54F26EE69F1001EB2D6 /* SizeClassView.swift */,
 			);
 			path = "Day 96";
+			sourceTree = "<group>";
+		};
+		C5F8D55726F0A70F001EB2D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5F8D55526F0A6A7001EB2D6 /* Bundle+Decodable.swift */,
+				C5F8D55326F0A40A001EB2D6 /* Resort.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C5F8D55826F0A71E001EB2D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C5F8D52526ED371A001EB2D6 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F8D55226F0A32C001EB2D6 /* resorts.json in Resources */,
 				C5F8D53B26ED371A001EB2D6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +242,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5F8D55026EE69F1001EB2D6 /* SizeClassView.swift in Sources */,
+				C5F8D55626F0A6A7001EB2D6 /* Bundle+Decodable.swift in Sources */,
 				C5F8D53926ED371A001EB2D6 /* ContentView.swift in Sources */,
+				C5F8D55426F0A40A001EB2D6 /* Resort.swift in Sources */,
 				C5F8D53726ED371A001EB2D6 /* SnowSeekerApp.swift in Sources */,
 				C5F8D54A26EE0A4C001EB2D6 /* AlertSheetOptionals.swift in Sources */,
 				C5F8D54C26EE3037001EB2D6 /* UsingGroups.swift in Sources */,
