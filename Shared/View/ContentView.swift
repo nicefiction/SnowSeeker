@@ -22,7 +22,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(resorts) { (resort: Resort) in
-                    NavigationLink(destination: Text(resort.name)) {
+                    NavigationLink(destination: ResortView(resort: resort)) {
                         Image(resort.id)
                             .resizable()
                             .scaledToFill()
@@ -43,12 +43,41 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Resorts")
+            // .phoneOnlyStackNavigationView()
+            WelcomeView()
         }
     }
 }
 
+
+
+
+
+// MARK: - EXTENSIONS -
+
+extension View {
+    
+    func phoneOnlyStackNavigationView()
+    -> some View {
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return AnyView(self.navigationViewStyle(StackNavigationViewStyle()))
+        } else {
+            return AnyView(self)
+        }
+    }
+}
+
+
+
+
+
+// MARK: - PREVIEWS -
+
 struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
+        
         ContentView()
     }
 }

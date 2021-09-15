@@ -13,8 +13,7 @@ struct SnowSeekerApp: App {
         
         WindowGroup {
             
-            // ContentView()
-            SizeClassView()
+            ContentView()
         }
     }
 }

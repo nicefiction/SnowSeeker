@@ -10,20 +10,20 @@ struct Resort: Codable,
     
     // MARK: - NESTED TYPES
     
-    enum Facility: String {
-        
-        case family = "Family"
-        case crossCountry = "Cross-country"
-        case accomodation = "Accommodation"
-        case ecoFriendly = "Eco-friendly"
-    }
+//    enum Facility: String {
+//
+//        case family = "Family"
+//        case crossCountry = "Cross-country"
+//        case accomodation = "Accommodation"
+//        case ecoFriendly = "Eco-friendly"
+//    }
     
     
     
     // MARK: - STATIC PROPERTIES
     
     static let decodedResorts: Array<Resort> = Bundle.main.decode("resorts.json")
-    static let exampleResort: Resort = decodedResorts[0]
+    static let example: Resort = decodedResorts[0]
     
     
     
