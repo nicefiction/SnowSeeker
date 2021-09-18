@@ -1,4 +1,4 @@
-// ResortView.swift
+// ResortView2.swift
 
 // MARK: - LIBRARIES -
 
@@ -6,12 +6,13 @@ import SwiftUI
 
 
 
-struct ResortView: View {
+struct ResortView2: View {
     
     // MARK: - PROPERTY WRAPPERS
     
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
-    @State private var selectedFacility: String?
+    // @State private var selectedFacility: String?
+    @State private var selectedFacility: Facility2?
     
     
     
@@ -19,7 +20,7 @@ struct ResortView: View {
     
     let resort: Resort
     
-
+    
     
     // MARK: - COMPUTED PROPERTIES
     
@@ -41,7 +42,6 @@ struct ResortView: View {
             }
             .font(.headline)
             .foregroundColor(.secondary)
-            
             VStack(alignment: .leading,
                    spacing: 0) {
                 Image(decorative: resort.id)
@@ -50,14 +50,9 @@ struct ResortView: View {
                 Group {
                     Text(resort.description)
                         .padding(.vertical)
-//                    Text(resort.facilities.joined(separator: ", "))
-//                    Text(ListFormatter.localizedString(byJoining: resort.facilities))
-//                        .foregroundColor(.secondary)
                     HStack {
-//                        ForEach(resort.facilities,
-//                                id: \.self) { (facility: String) in
-                        ForEach(resort.facilities) { (facility: String) in
-                            Facility.createIcon(for: facility)
+                        ForEach(resort.facilityTypes) { (facility: Facility2) in
+                            facility.icon
                                 .font(.title)
                                 .onTapGesture {
                                     selectedFacility = facility
@@ -71,8 +66,8 @@ struct ResortView: View {
             .navigationBarTitle(Text(resort.country),
                                 displayMode: .inline)
         }
-        .alert(item: $selectedFacility) { (facility: String) in
-            Facility.createAlert(for: facility)
+        .alert(item: $selectedFacility) { (facility: Facility2) in
+            facility.alert
         }
     }
 }
@@ -81,23 +76,12 @@ struct ResortView: View {
 
 
 
-// MARK: - EXTENSIONS -
-
-extension String: Identifiable {
-    
-    public var id: String { self }
-}
-
-
-
-
-
 // MARK: - PREVIEWS -
 
-struct ResortView_Previews: PreviewProvider {
+struct ResortView2_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        ResortView(resort: Resort.example)
+        ResortView2(resort: Resort.example)
     }
 }

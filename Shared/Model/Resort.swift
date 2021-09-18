@@ -16,7 +16,7 @@ struct Resort: Codable,
 //        case crossCountry = "Cross-country"
 //        case accomodation = "Accommodation"
 //        case ecoFriendly = "Eco-friendly"
-//    }
+//    } // OLIVIER
     
     
     
@@ -40,4 +40,13 @@ struct Resort: Codable,
     let runs: Int
     let size: Int
     let snowDepth: Int
+    
+    
+    
+    // MARK: - COMPUTED PROPERTIES
+    
+    var facilityTypes: Array<Facility2> {
+        
+        return facilities.map(Facility2.init)
+    }
 }
